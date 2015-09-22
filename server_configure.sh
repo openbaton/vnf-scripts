@@ -1,3 +1,3 @@
 #!/bin/bash
 
-iperf -c $ip1
+iperf -c $ip1 &
