@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install iperf
+sudo apt-get update && sudo apt-get install iperf screen

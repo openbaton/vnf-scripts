@@ -1,3 +1,4 @@
 #!/bin/bash
 
-iperf -c $ip1 &
+echo $db > /home/ubuntu/config
+screen -S client iperf -c $ip1
