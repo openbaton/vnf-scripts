@@ -1,3 +1,3 @@
 #!/bin/bash
 
-screen -S server iperf -s
+screen -dm -S server iperf -s
