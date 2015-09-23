@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo $db > /home/ubuntu/config
-screen -dm -S client iperf -c $ip1
+echo $new_key > /home/ubuntu/config
+iperf -c $ip1 > ~/iperf-client.log &

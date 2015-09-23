@@ -1,3 +1,3 @@
 #!/bin/bash
 
-screen -dm -S server iperf -s
+iperf -s > ~/iperf-server.log &
