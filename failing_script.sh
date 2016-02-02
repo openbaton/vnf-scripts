@@ -1,0 +1,4 @@
+# used for integration tests
+
+echo This failure is on purpose >&2
+exit 1
