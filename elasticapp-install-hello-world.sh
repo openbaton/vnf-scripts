@@ -29,8 +29,7 @@ echo "header('Content-Type: text/plain');" >> $TEST_FILE
 echo 'echo "Server IP: {$_SERVER['SERVER_ADDR']}";' >> $TEST_FILE
 echo 'echo "\nClient IP: {$_SERVER['REMOTE_ADDR']}";' >> $TEST_FILE
 echo 'echo "\nX-Forwarded-for: {$_SERVER['HTTP_X_FORWARDED_FOR']}\n";' >> $TEST_FILE
-echo "shell_exec('for i in {1..$CORES}; do echo "Hello World!!!" ; done');" >> $TEST_FILE
+echo "shell_exec('for i in {1..$CORES}; do echo Hello World ; done');" >> $TEST_FILE
 echo "?>" >> $TEST_FILE
 
 cat $TEST_FILE
-
