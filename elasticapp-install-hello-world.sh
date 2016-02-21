@@ -33,3 +33,4 @@ echo "shell_exec('for i in {1..$CORES}; do echo Hello World ; done');" >> $TEST_
 echo "?>" >> $TEST_FILE
 
 cat $TEST_FILE
+
