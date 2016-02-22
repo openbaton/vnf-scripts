@@ -19,13 +19,13 @@ else
 echo "LOOP2 is set to '$LOOP2'";
 fi
 sudo apt-get update
-sudo apt-get install apache2 apcalc -y
+sudo apt-get install apache2 -y
 sudo apt-get install php5 -y
 sudo apt-get install libapache2-mod-php5 -y
 sudo /etc/init.d/apache2 restart
 
 echo '#!/bin/bash' >> $SCRIPT_FILE
-echo 'for n in {1..'"$LOOP1"'}; do for i in {1..'"$LOOP2"'}; do md5sum <(echo "HelloWorld") ; calc "sqrt(2)"; done & done' >> $SCRIPT_FILE
+echo 'for n in {1..'"$LOOP1"'}; do for i in {1..'"$LOOP2"'}; do md5sum <(echo "HelloWorld"); done & done' >> $SCRIPT_FILE
 
 echo "<?php" >> $TEST_FILE
 echo "header('Content-Type: text/plain');" >> $TEST_FILE
