@@ -5,29 +5,27 @@ TEST_FILE="/var/www/html/$FILE_NAME"
 
 SCRIPT_FILE="/root/helloworld.sh"
 
-if [ -z ${STRESS_SECONDS+x} ]; then
-  echo "STRESS_SECONDS is unset";
-  STRESS_SECONDS="60"
+if [ -z ${LOOP1+x} ]; then
+echo "LOOP1 is unset";
+LOOP1="100"
 else
-  echo "STRESS_SECONDS is set to '$STRESS_SECONDS'";
+echo "LOOP1 is set to '$LOOP1'";
 fi
 
-if [ -z ${LOOP+x} ]; then
-  echo "LOOP is unset";
-  LOOP="1000"
+if [ -z ${LOOP2+x} ]; then
+echo "LOOP2 is unset";
+LOOP2="1000"
 else
-  echo "LOOP is set to '$LOOP'";
+echo "LOOP2 is set to '$LOOP2'";
 fi
-
 sudo apt-get update
-sudo apt-get install apache2 -y
+sudo apt-get install apache2 apcalc -y
 sudo apt-get install php5 -y
 sudo apt-get install libapache2-mod-php5 -y
 sudo /etc/init.d/apache2 restart
 
 echo '#!/bin/bash' >> $SCRIPT_FILE
-echo 'for i in {1..'"$LOOP"'}; do md5sum <(HelloWorld) ; done' >> $SCRIPT_FILE
-
+echo 'for n in {1..'"$LOOP1"'}; do for i in {1..'"$LOOP2"'}; do md5sum <(echo "HelloWorld") ; calc "sqrt(2)"; done & done' >> $SCRIPT_FILE
 
 echo "<?php" >> $TEST_FILE
 echo "header('Content-Type: text/plain');" >> $TEST_FILE
