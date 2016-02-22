@@ -3,7 +3,7 @@
 FILE_NAME="file.php"
 TEST_FILE="/var/www/html/$FILE_NAME"
 
-SCRIPT_FILE="/root/helloworld.sh"
+SCRIPT_FILE="/tmp/helloworld.sh"
 
 if [ -z ${LOOP1+x} ]; then
 echo "LOOP1 is unset";
