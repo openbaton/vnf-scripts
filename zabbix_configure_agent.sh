@@ -1,16 +1,16 @@
 
 #!/bin/bash
 
-if [[ -z "$private_floatingIp" ]]; then
+if [[ -z "$zabbix_private_floatingIp" ]]; then
   echo "private_floatingIp trying with private"
-  if [[ -z "$private_floatingIp" ]]; then
+  if [[ -z "$zabbix_private" ]]; then
     echo "private is required"
     exit 1
   else
-    export MONITORING_IP=$private
+    export MONITORING_IP=$zabbix_private
   fi
 else
-  export MONITORING_IP=$private_floatingIp  
+  export MONITORING_IP=$zabbix_private_floatingIp  
 fi
 
 echo "Installing zabbix-agent for server at $MONITORING_IP"
