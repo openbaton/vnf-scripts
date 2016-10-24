@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #Start sipp server
-sipp -sn uas
+screen -d -m -S server sipp -sn uas
