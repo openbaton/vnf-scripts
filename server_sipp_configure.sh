@@ -16,3 +16,5 @@ fi
 #Configuration
 touch /root/sipp-server-ip
 echo "$server_private" > /root/sipp-server-ip
+
+echo "Saved sipp server IP: $server_private"
