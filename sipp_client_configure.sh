@@ -14,7 +14,7 @@ if [ -f /root/sipp-server-ip ]; then
 fi
 
 #Configuration
-source /opt/openbaton/scripts/ob_parameters
+source /opt/openbaton/scripts/ob_parameters.sh
 touch /root/sipp-server-ip
 
 echo "$OB_server_private" > /root/sipp-server-ip
