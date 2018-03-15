@@ -17,9 +17,9 @@ fi
 source /opt/openbaton/scripts/ob_parameters.sh
 touch /root/sipp-server-ip
 
-echo "$OB_server_private" > /root/sipp-server-ip
+echo "$OB_server_VNFC_private" > /root/sipp-server-ip
 
-echo "Saved sipp server IP: $OB_server_private"
+echo "Saved sipp server IP: $OB_server_VNFC_private"
 
 # test that parameters are received
 echo "running cat /opt/openbaton/scripts/ob_parameters.sh"
